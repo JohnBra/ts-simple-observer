@@ -1,6 +1,6 @@
 {
   "name": "ts-simple-observer",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Simple observer/subject TypeScript interfaces including corresponding mock classes for unit testing",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
