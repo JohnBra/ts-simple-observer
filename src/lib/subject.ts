@@ -7,7 +7,7 @@ export interface Subject {
     /**
     * Collection of observers
     */
-    observers: Observer[] | Map<any, Observer>;
+    observers: Observer[] | Map<any, Observer> | Set<Observer>;
 
     /**
     * Attach an observer to the subject
