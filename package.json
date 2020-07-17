@@ -1,8 +1,9 @@
 {
   "name": "ts-simple-observer",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Simple observer/subject TypeScript interfaces including corresponding mock classes for unit testing",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,9 +11,9 @@
     "type": "git",
     "url": "git+https://github.com/JohnBra/ts-simple-observer.git"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["typescript", "observer", "subject", "notify", "update", "observer-pattern", "pattern", "test", "testing"],
+  "author": "Jonathan Braat",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JohnBra/ts-simple-observer/issues"
   },
