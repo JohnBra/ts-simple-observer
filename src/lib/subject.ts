@@ -1,9 +1,9 @@
-import Observer from './observer';
+import { Observer } from './observer';
 
 /**
 * The Subject interface declares a set of methods for managing subscribers
 */
-export default interface Subject {
+export interface Subject {
     /**
     * Collection of observers
     */

@@ -1,11 +1,11 @@
-import Subject from './subject';
+import { Subject } from './subject';
 
 /**
 * The Observer interface declares the update method, used by subjects
 */
-export default interface Observer {
+export interface Observer {
     /**
-    * Receive update from subject.
+    * Receive an update from a subject.
     *
     * @param subject the subject of which triggered the notification
     * @param data optional data the subject sent with the notification
