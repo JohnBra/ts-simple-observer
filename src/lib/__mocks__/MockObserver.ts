@@ -1,7 +1,7 @@
-import Subject from '../subject';
-import Observer from '../observer';
+import { Subject } from '../subject';
+import { Observer } from '../observer';
 
-export default class MockObserver implements Observer {
+export class MockObserver implements Observer {
     updateReceived: boolean;
     updateCount: number;
     subjectDataMap: Map<Subject, any>;

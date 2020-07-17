@@ -1,7 +1,7 @@
-import Subject from '../subject';
-import Observer from '../observer';
+import { Subject } from '../subject';
+import { Observer } from '../observer';
 
-export default class MockSubject implements Subject {
+export class MockSubject implements Subject {
     observers: Observer[];
 
     constructor() {
