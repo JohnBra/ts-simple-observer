@@ -5,17 +5,33 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JohnBra/ts-simple-observer.git"
   },
-  "keywords": ["typescript", "observer", "subject", "notify", "update", "observer-pattern", "pattern", "test", "testing"],
+  "keywords": [
+    "typescript",
+    "observer",
+    "subject",
+    "notify",
+    "update",
+    "observer-pattern",
+    "pattern",
+    "test",
+    "testing"
+  ],
   "author": "Jonathan Braat",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/JohnBra/ts-simple-observer/issues"
   },
-  "homepage": "https://github.com/JohnBra/ts-simple-observer#readme"
+  "homepage": "https://github.com/JohnBra/ts-simple-observer#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.4",
+    "jest": "^26.1.0",
+    "ts-jest": "^26.1.3",
+    "typescript": "^3.9.7"
+  }
 }

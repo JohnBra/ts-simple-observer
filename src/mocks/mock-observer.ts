@@ -1,5 +1,5 @@
-import { Subject } from '../subject';
-import { Observer } from '../observer';
+import { Subject } from '..';
+import { Observer } from '..';
 
 export class MockObserver implements Observer {
     updateReceived: boolean;
