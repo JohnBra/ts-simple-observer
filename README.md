@@ -1,4 +1,6 @@
 # A small lib for the observer pattern
+![coverage](https://github.com/JohnBra/ts-simple-observer/workflows/coverage/badge.svg)
+
 Just simple observer/subject TypeScript interfaces as well as convenient mock classes for unit testing.
 
 ## Installing
