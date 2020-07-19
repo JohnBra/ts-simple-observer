@@ -24,7 +24,45 @@ jobs:
       - run: yarn install
       - run: yarn test
       - run: yarn build
+        -
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: |
+            dist/
+            .npmignore
+            .gitignore
+            package.json
+            LICENSE
+
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  test-artifact-download:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+      - run: ls
+
+  test-artifact-download-2:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+        with:
+          name: dist
+          path: |
+            dist/
+            .npmignore
+            .gitignore
+            package.json
+            LICENSE
+      - run: ls

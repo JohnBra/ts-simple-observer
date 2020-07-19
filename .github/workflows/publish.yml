@@ -18,13 +18,13 @@ jobs:
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
-            name: npm-package
-            path: |
-              dist/
-              .npmignore
-              .gitignore
-              package.json
-              LICENSE
+          name: npm-package
+          path: |
+            dist/
+            .npmignore
+            .gitignore
+            package.json
+            LICENSE
 
   publish-npm:
     needs: build
