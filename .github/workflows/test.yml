@@ -1,6 +1,10 @@
-name: Node.js CI
+name: coverage
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   build:
@@ -9,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x]
+        node-version: [12.x, 14.x]
 
     steps:
       - uses: actions/checkout@v2
