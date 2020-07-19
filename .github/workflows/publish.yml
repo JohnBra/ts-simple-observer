@@ -5,19 +5,45 @@ on:
     types: [published]
 
 jobs:
-
-  publish-npm:
-    needs: build
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 14
-          registry-url: https://registry.npmjs.org/
       - run: yarn install
       - run: yarn test
       - run: yarn build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v1
+        with:
+            name: build-env
+            path: |
+              dist/
+              .npmignore
+              .gitignore
+              package.json
+              LICENSE
+
+  publish-npm:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@master
+        with:
+          name: build-env
+          path: |
+            dist/
+            .npmignore
+            .gitignore
+            package.json
+            LICENSE
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://registry.npmjs.org/
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
