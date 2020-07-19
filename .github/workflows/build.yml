@@ -25,15 +25,15 @@ jobs:
       - run: yarn test
       - run: yarn build
       - name: Upload build artifacts
-          uses: actions/upload-artifact@v1
-          with:
-            name: dist
-            path: |
-              dist
-              .npmignore
-              .gitignore
-              package.json
-              LICENSE
+        uses: actions/upload-artifact@v1
+        with:
+          name: dist
+          path: |
+            dist
+            .npmignore
+            .gitignore
+            package.json
+            LICENSE
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
