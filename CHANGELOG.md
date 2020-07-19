@@ -11,9 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - MockSubject class tests
 - jest for testing
 - .github directory including testing workflow
+- build and coverage badges to readme
 
 ### Changed
 - directory structure
+- decreased npm package size drastically
 
 ## [1.0.1] - 2020-07-17
 ### Changed
