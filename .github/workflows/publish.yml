@@ -20,7 +20,7 @@ jobs:
         with:
             name: build-env
             path: |
-              dist/
+              dist
               .npmignore
               .gitignore
               package.json
@@ -35,7 +35,7 @@ jobs:
         with:
           name: build-env
           path: |
-            dist/
+            dist
             .npmignore
             .gitignore
             package.json
