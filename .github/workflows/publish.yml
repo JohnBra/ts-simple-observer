@@ -5,14 +5,35 @@ on:
     types: [published]
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      - run: yarn install
+      - run: yarn test
+      - run: yarn build
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: npm-package@latest
+          path: |
+            dist/
+            README.md
+            CHANGELOG.md
+            package.json
+            LICENSE
 
   publish-npm:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
         with:
-          name: npm-package
+          name: npm-package@latest
       - uses: actions/setup-node@v1
         with:
           node-version: 14
