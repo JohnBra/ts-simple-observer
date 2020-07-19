@@ -24,18 +24,6 @@ jobs:
       - run: yarn install
       - run: yarn test
       - run: yarn build
-      - run: ls
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: dist
-          path: |
-            dist/
-            .npmignore
-            .gitignore
-            package.json
-            LICENSE
-
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
