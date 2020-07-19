@@ -24,6 +24,7 @@ jobs:
       - run: yarn install
       - run: yarn test
       - run: yarn build
+      - run: ls
 
       - name: Coveralls
         uses: coverallsapp/github-action@master
