@@ -16,11 +16,11 @@ jobs:
       - run: yarn test
       - run: yarn build
       - name: Upload build artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
-            name: build-env
+            name: npm-package
             path: |
-              dist
+              dist/
               .npmignore
               .gitignore
               package.json
@@ -31,15 +31,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/download-artifact@master
+      - uses: actions/download-artifact@v2
         with:
-          name: build-env
-          path: |
-            dist
-            .npmignore
-            .gitignore
-            package.json
-            LICENSE
+          name: npm-package
       - uses: actions/setup-node@v1
         with:
           node-version: 14
