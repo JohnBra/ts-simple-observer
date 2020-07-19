@@ -1,5 +1,5 @@
 # A small lib for the observer pattern
-![build](https://github.com/JohnBra/ts-simple-observer/workflows/build/badge.svg)
+![build](https://github.com/JohnBra/ts-simple-observer/workflows/build/badge.svg) [![Coverage Status](https://coveralls.io/repos/github/JohnBra/ts-simple-observer/badge.svg?branch=master)](https://coveralls.io/github/JohnBra/ts-simple-observer?branch=master)
 
 Just simple observer/subject TypeScript interfaces as well as convenient mock classes for unit testing.
 
